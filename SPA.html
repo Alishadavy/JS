@@ -1,0 +1,165 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>SPA</title>  
+<script type="text/javascript" src="SPA.js" ></script>
+</head>
+  
+  
+<body>
+
+<!-- SIGN IN -->
+
+<div id="signin"><div class="container">
+<div class="content">
+
+ <center>
+     <fieldset>
+
+    <h2>Sign In</h2>
+    <table border='0'> 
+        	
+        <tr>
+          <td><LABEL for="email">Email:<sup style="color:red;">*</sup> </LABEL></td>
+          <td><INPUT type="text" id="email"></td><td width="200px"><i style="color:red;" id="m1"></i></td>
+        </tr>
+
+
+        <tr>
+          <td><LABEL for="password">Password:<sup style="color:red;">*</sup> </LABEL></td>
+          <td><INPUT type="password" id="password"></td><td width="200px"><i style="color:red;" id="m2"></i></td>
+        </tr>
+
+
+        
+         <tr>
+          <td></td><td><br/><INPUT type="submit" onClick="validateUser()" value="Submit"></td>
+         </tr>
+        
+
+         <tr>
+      <td><a href="#" onclick="toggleVisibility('signup');">sigup</a></td>
+    </tr>
+
+    <tr>
+            <td><a href="#" onclick="toggleVisibility('contact');">contact</a></td>
+        </tr>
+   
+
+
+
+    </table>
+ 
+    </center>
+
+  </div>
+    </div>
+</div>
+
+<!-- SIGN UP -->
+
+<div id="signup" style="display: none;"><div class="container">
+        <div class="content">
+        
+         <center>
+             <fieldset> 
+        
+            <h2>Sign Up</h2>
+            <table border='0'> 
+        
+               <tr>
+                  <td><LABEL for="name">Name:<sup style="color:red;">*</sup> </LABEL></td>
+                  <td><INPUT type="text" id="sname"></td><td width="200px"><i style="color:red;" id="m3"></i></td>
+                </tr>
+        
+        
+                
+                <tr>
+                  <td><LABEL for="email">Email:<sup style="color:red;">*</sup> </LABEL></td>
+                  <td><INPUT type="text" id="semail"></td><td width="200px"><i style="color:red;" id="m4"></i></td>
+                </tr>
+        
+        
+                <tr>
+                  <td><LABEL for="password">Password:<sup style="color:red;">*</sup> </LABEL></td>
+                  <td><INPUT type="password" id="spassword"></td><td width="200px"><i style="color:red;" id="m5"></i></td>
+                </tr>
+        
+                
+                 <tr>
+                  <td></td><td><br/><INPUT type="submit" onClick="register()" value="Submit"></td>
+                 </tr>
+
+
+         <tr>
+                <td><a href="#" onclick="toggleVisibility('signin');">sigin</a></td>
+              </tr>
+                 
+                
+        
+            </table>
+         
+            </center>
+        
+          </div>
+            </div>
+        
+        </div>
+
+
+<!-- CONTACT -->
+
+<div id="contact" style="display: none;"><div class="container">
+        <div class="content">
+        
+         <center>
+             <fieldset>
+        
+            <h2>Question</h2>
+            <table border='0'> 
+                
+        
+                <tr>
+                  <td><LABEL for="name">Name:<sup style="color:red;">*</sup> </LABEL></td>
+                  <td><INPUT type="text" id="cname"></td><td width="200px"><i style="color:red;" id="m6"></i></td>
+                </tr>
+        
+        
+        
+                <tr>
+                  <td><LABEL for="email">Email:<sup style="color:red;">*</sup> </LABEL></td>
+                  <td><INPUT type="text" id="cemail"></td><td width="200px"><i style="color:red;" id="m7"></i></td>
+                </tr>      
+        
+              
+        
+                <tr>
+                <td><LABEL for="question">Question:<sup style="color:red;">*</sup> </LABEL></td>
+                <td><textarea  cols="38" rows="10" id="cquestion"></textarea></td><td><i style="color:red;" id="m8"> </i></td>
+                </tr>
+
+                <tr>
+                        <td><a href="#" onclick="toggleVisibility('signin');">sigin</a></td>
+                      </tr>
+        
+        
+                
+                 <tr>
+                 <td></td><td><br/><INPUT type="submit" onClick=" usercontact()" value="Submit">
+                </td>
+                 </tr>  
+                 
+        
+            </table>
+         
+            </center>
+        
+          </div>
+           </div></div>
+</div>
+</div>
+  
+</body>
+</html>
