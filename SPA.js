@@ -5,22 +5,23 @@ var visibleDivId = null;
 function toggleVisibility(divId) 
 {
   if(visibleDivId === divId) { }
-   else 
-   {
+  else 
+    {
     visibleDivId = divId;
     }
   hideNonVisibleDivs();
 }
+
 function hideNonVisibleDivs() {
   var i, divId, div;
   for(i = 0; i < divs.length; i++) {
-    divId = divs[i];
-    div = document.getElementById(divId);
-    if(visibleDivId === divId) {
-      div.style.display = "block";
-    } else {
-      div.style.display = "none";
-    }
+      divId = divs[i];
+      div = document.getElementById(divId);
+      if(visibleDivId === divId) {
+        div.style.display = "block";
+      }else {
+        div.style.display = "none";
+      }
   }
 }
 
@@ -30,45 +31,40 @@ function validateUser()
             document.getElementById("m2").innerHTML='';
           	var userid= document.getElementById('email');
           	var password = document.getElementById('password');
-             var x=ValidateEmail(userid,"m1");
-             var y=ValidatePassword(password,"m2");
+            var x=ValidateEmail(userid,"m1");
+            var y=ValidatePassword(password,"m2");
             if(x && y)
             {
               abc = JSON.parse(localStorage["abc"]);
               valid=0;
               for(var i=0;i<abc.length;i++)
-             {
-              var checkmail =JSON.parse(localStorage["abc"])[i].email;
-              var checkpassword =JSON.parse(localStorage["abc"])[i].password;
-      
-              if ((checkmail==document.getElementById("email").value) && (checkpassword==document.getElementById("password").value))
               {
-                valid=1;
-                break;
+                var checkmail =JSON.parse(localStorage["abc"])[i].email;
+                var checkpassword =JSON.parse(localStorage["abc"])[i].password;
+                if ((checkmail==document.getElementById("email").value) && (checkpassword==document.getElementById("password").value))
+                  {
+                  valid=1;
+                  break;
+                  }
               }
-            }
-
               if(valid==1)
-               {
+              {
                  alert("Login Successfull");
-               }
-                  
-             else
-             {
-              alert("Incorrect username or password");
-             }
-
-
-
+              }               
+              else
+              {
+                 alert("Incorrect username or password");
               }
+
+           }
 
 }
 
 function register()
  {
-              document.getElementById("m3").innerHTML='';
-              document.getElementById("m4").innerHTML='';
-              document.getElementById("m5").innerHTML='';
+            document.getElementById("m3").innerHTML='';
+            document.getElementById("m4").innerHTML='';
+            document.getElementById("m5").innerHTML='';
 
           	var sname= document.getElementById('sname');
           	var semail= document.getElementById('semail');
@@ -123,7 +119,7 @@ function ValidatePassword(password,msg)
                                   document.getElementById(msg).innerHTML+="Enter password ranging 6-15 word";
                                   return 0;
                                }
-                               else  return 1;
+                          else  return 1;
 } 
 
 function ValidateEmail(userid,msg) 
